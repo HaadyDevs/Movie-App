@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                         'https://image.tmdb.org/t/p/w185${movie.posterPath}',
                       ),
                     ),
-                    SizedBox(height: 8,),
+                    SizedBox(height: 12,),
                     Text(
                       movie.originalTitle,
                       textAlign: TextAlign.center,
