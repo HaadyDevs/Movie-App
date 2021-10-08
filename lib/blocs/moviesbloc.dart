@@ -5,16 +5,20 @@ import 'package:rxdart/rxdart.dart';
 
 class MoviesBloc implements BaseBloc {
   MoviesRepository _moviesRepository = MoviesRepository();
-  PublishSubject<ResponseModel> _movieController = new PublishSubject<ResponseModel>();
+  PublishSubject<ResponseModel> _movieController =
+      new PublishSubject<ResponseModel>();
 
   Stream<ResponseModel> get moviesStream => _movieController.stream;
 
-  MoviesBloc(){
+  MoviesBloc() {
     getMovies();
   }
 
-  Future<ResponseModel> getMovies () async {
-    ResponseModel movies = await  _moviesRepository.getPopularMovies();
+  Future<ResponseModel> getMovies() async {
+    ResponseModel movies = await _moviesRepository.getPopularMovies();
+    if (movies.results != null) {
+      return true;
+    }
     _movieController.add(movies);
   }
 
@@ -22,6 +26,4 @@ class MoviesBloc implements BaseBloc {
   void dispose() {
     _movieController.close();
   }
-
-
 }
