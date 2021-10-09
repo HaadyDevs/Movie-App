@@ -17,15 +17,14 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         child: StreamBuilder(
           stream: _bloc.moviesStream,
-          builder: (context, snapshot){
-            if(snapshot.hasData){
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
               return buildGrid(snapshot, _detailsBloc);
-            } else if (snapshot.hasError){
+            } else if (snapshot.hasError) {
               return Center(
                 child: Text(snapshot.error.toString()),
               );
-            }
-            else{
+            } else {
               return Center(
                 child: CircularProgressIndicator(),
               );
@@ -36,44 +35,44 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildGrid(snapshot, detailsBloc){
+  Widget buildGrid(snapshot, detailsBloc) {
     return GridView.builder(
-      itemCount: snapshot.data.results.length,
-      gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      itemBuilder: (BuildContext context, int index) {
-        Movie movie = snapshot.data.results[index];
-        return InkResponse(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              child: Column(
+        itemCount: snapshot.data.results.length,
+        gridDelegate:
+            new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (BuildContext context, int index) {
+          Movie movie = snapshot.data.results[index];
+          return InkResponse(
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Container(
+                child: Column(
                   children: [
                     Flexible(
                       child: Image.network(
                         'https://image.tmdb.org/t/p/w185${movie.posterPath}',
                       ),
                     ),
-                    SizedBox(height: 12,),
+                    SizedBox(
+                      height: 12,
+                    ),
                     Text(
                       movie.originalTitle,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500
-                      ),
+                          fontSize: 16, fontWeight: FontWeight.w500),
                     )
                   ],
+                ),
               ),
             ),
-          ),
-          onTap: () {
-            detailsBloc.addDetails(movie);
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) => DetailScreen()
-            ));
-          },
-        );
-      });
+            onTap: () {
+              detailsBloc.addDetails(movie);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailScreen()));
+            },
+          );
+        });
   }
 }
