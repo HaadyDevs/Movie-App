@@ -10,5 +10,6 @@ class MoviesRepository{
     final response = await _apiHelper.get();
     ResponseModel responseModel = ResponseModel.fromJson(json.decode(response));
     return responseModel;
+    // this will return popilar movies
   }
 }
