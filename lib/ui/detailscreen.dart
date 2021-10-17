@@ -77,11 +77,11 @@ class _DetailScreenState extends State<DetailScreen> {
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 18,
+                                  fontSize: 16,
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 4,
                               ),
                               SmoothStarRating(
                                   allowHalfRating: false,
