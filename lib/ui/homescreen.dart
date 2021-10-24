@@ -13,6 +13,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Popular Movies"),
+        actions: <Widget>[
+          new Icon(
+            Icons.movie,
+            color: Colors.white,
+          )
+        ]
       ),
       body: Container(
         child: StreamBuilder(
