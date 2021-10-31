@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     final _detailsBloc = MovieBlocProvider.detail(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Popular Movies"),
+        title: Text("Popular Movies in the World"),
         actions: <Widget>[
           new Icon(
             Icons.movie,
@@ -60,14 +60,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 12,
+                      height: 11,
                     ),
                     Text(
                       movie.originalTitle,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.poppins(
-                          fontSize: 16, fontWeight: FontWeight.w500),
+                          fontSize: 18, fontWeight: FontWeight.w500),
                     )
                   ],
                 ),

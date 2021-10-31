@@ -55,7 +55,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 overflow: TextOverflow.clip,
                                 style: GoogleFonts.raleway(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 35
+                                    fontSize: 32
                                 ),
                               ),
                               SizedBox(
@@ -70,7 +70,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 30,
+                                height: 32,
                               ),
                               Text(
                                 "Rating",
