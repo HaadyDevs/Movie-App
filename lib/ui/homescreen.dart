@@ -12,7 +12,13 @@ class HomeScreen extends StatelessWidget {
     final _detailsBloc = MovieBlocProvider.detail(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Popular Movies"),
+        title: Text("Popular Movies in the World"),
+        actions: <Widget>[
+          new Icon(
+            Icons.movie,
+            color: Colors.grey,
+          )
+        ]
       ),
       body: Container(
         child: StreamBuilder(
@@ -44,7 +50,7 @@ class HomeScreen extends StatelessWidget {
           Movie movie = snapshot.data.results[index];
           return InkResponse(
             child: Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(14),
               child: Container(
                 child: Column(
                   children: [
@@ -54,15 +60,12 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 12,
+                      height: 11,
                     ),
                     Text(
                       movie.originalTitle,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.poppins(
-                          fontSize: 15, fontWeight: FontWeight.w500),
-                    )
                   ],
                 ),
               ),

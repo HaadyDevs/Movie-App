@@ -55,7 +55,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 overflow: TextOverflow.clip,
                                 style: GoogleFonts.raleway(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 35
+                                    fontSize: 32
                                 ),
                               ),
                               SizedBox(
@@ -70,18 +70,18 @@ class _DetailScreenState extends State<DetailScreen> {
                                 ),
                               ),
                               SizedBox(
-                                height: 30,
+                                height: 32,
                               ),
                               Text(
                                 "Rating",
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 18,
+                                  fontSize: 16,
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 4,
                               ),
                               SmoothStarRating(
                                   allowHalfRating: false,
