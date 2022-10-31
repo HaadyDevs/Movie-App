@@ -2,25 +2,25 @@
   "configVersion": 2,
   "packages": [
     {
-      "name": "async",
+      "name": "async11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.2"
     },
     {
-      "name": "boolean_selector",
+      "name": "boolean_selector11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.4"
     },
     {
-      "name": "characters",
+      "name": "characters11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.6"
     },
     {
-      "name": "charcode",
+      "name": "charcode11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.0"
