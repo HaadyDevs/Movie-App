@@ -26,19 +26,19 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "clock",
+      "name": "clock11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
-      "name": "collection",
+      "name": "collection11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.13",
       "packageUri": "lib/",
       "languageVersion": "2.3"
     },
     {
-      "name": "convert",
+      "name": "convert11",
       "rootUri": "file:///E:/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "1.17"
