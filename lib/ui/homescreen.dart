@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         actions: <Widget>[
           new Icon(
             Icons.movie,
-            color: Colors.white,
+            color: Colors.grey,
           )
         ]
       ),
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
           Movie movie = snapshot.data.results[index];
           return InkResponse(
             child: Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(14),
               child: Container(
                 child: Column(
                   children: [
@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.poppins(
-                          fontSize: 18, fontWeight: FontWeight.w500),
+                          fontSize: 17, fontWeight: FontWeight.w500),
                     )
                   ],
                 ),
