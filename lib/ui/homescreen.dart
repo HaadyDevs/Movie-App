@@ -66,9 +66,6 @@ class HomeScreen extends StatelessWidget {
                       movie.originalTitle,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.poppins(
-                          fontSize: 17, fontWeight: FontWeight.w500),
-                    )
                   ],
                 ),
               ),
